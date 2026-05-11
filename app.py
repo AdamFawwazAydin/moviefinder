@@ -3,7 +3,8 @@ import requests
 
 app = Flask(__name__)
 
-API_KEY = "c0b22e59"
+import os
+API_KEY = os.getenv("API_KEY")
 
 # HOME (SEARCH)
 @app.route('/', methods=['GET', 'POST'])
